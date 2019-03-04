@@ -72,6 +72,10 @@ main {
       margin-top: 20vh;
     }
   }
+
+  &#home2 {
+    overflow: hidden;
+  }
 }
 
 .about-info {
@@ -110,6 +114,47 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+}
+
+// Work/Projects
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      //opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, $amount: 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, $amount: 50);
+  color: #333;
 }
 
 #main-footer {
